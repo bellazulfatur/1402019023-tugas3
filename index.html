@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hitung tabung</title>
+</head>
+<body align="left" style="background-image: url(2.png); color: white;">
+	<tr>
+			<td><strong><a href="index.html">Tabung</a></strong></td>
+			<td><strong><a href="bola.html">Bola</a></strong></td>
+			<td><strong><a href="kerucut.html">Kerucut</a></strong></td>
+		</tr>
+	<h2>calculate</h2>
+	<p>insert tube formula</p>
+	<input type="number" placeholder="masukan nilai jari-jari alas tabung (cm)" id="jari"><br>
+	<br>
+	<input type="number" placeholder="masukan nilai tinggi tabung(cm)" id="tinggi"> <br>
+	<br>
+	<input type="button" onclick="tabung()" value="calculate">
+	<br>
+	<br>
+	Hasil : <span id="hasil"></span>
+	<br>
+	<br>
+<input type="number" placeholder="masukan nilai jari-jari alas tabung (cm)" id="jaritabung"><br>
+	<br>
+	<input type="number" placeholder="masukan nilai tinggi tabung(cm)" id="tinggitabung"> <br>
+	<br>
+	<input type="button" onclick="tabung()" value="calculate">
+	<br>
+	<br>
+	Hasil : <span id="hasiltabung"></span>
+	<br>
+	<br>
+
+	<script>
+		var hasilasli=document.getElementById('hasil');
+		var hasilaslitabung=document.getElementById('hasiltabung');
+
+		function tabung() {
+			var jariasli=jari.value;
+				tinggiasli=tinggi.value;
+
+			hasilasli.innerHTML=2*3.14*(parseFloat(jariasli)+parseFloat(tinggiasli));
+
+			var jariaslitabung=jaritabung.value;
+				tinggiaslitabung=tinggitabung.value;
+
+			hasilaslitabung.innerHTML=3.14*Math.pow(jariaslitabung, 2)*tinggiaslitabung;
+		}
+	</script>
+</body>
+</html>

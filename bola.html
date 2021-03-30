@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hitung tabung</title>
+</head>
+<body align="left" style="background-image: url(2.png); color: white;">
+	<tr>
+			<td><strong><a href="index.html">Tabung</a></strong></td>
+			<td><strong><a href="bola.html">Bola</a></strong></td>
+			<td><strong><a href="kerucut.html">Kerucut</a></strong></td>
+		</tr>
+
+<h2>Volume Bola</h2>
+	<p>Masukan Jari-jari Bola</p><br>
+	<input type="number" name="Jari-jari Bola" id="jari"><br>
+	<br>
+	<input type="button" onclick="bola()" value=" hitung Luas Bola"><br>
+	<br>
+	Hasil : <span id = "hasil"></span>
+	<br>
+	<h2>Luas Permukaan Bola</h2>
+	<input type="number" name="Jari-jari Bola" id="jaribola"><br>
+	<br>
+	<input type="button" onclick="bola()" value="Hitung luas bola"><br>
+	<br>
+	Hasil : <span id = "hasilbola"></span>
+
+	<script>
+		var hasilpasti= document.getElementById('hasil');
+		var hasilpastibola = document.getElementById('hasilbola');
+		function bola() {
+			var jariasli = jari.value;
+			hasilpasti.innerHTML= 4*3.14*Math.pow(jariasli, 2);
+
+			var jariaslibola = jari.value;
+			hasilpastibola.innerHTML= (4*3.14*Math.pow(jariaslibola, 3))/3;
+		}
+	</script>
+	</body>
+</html>

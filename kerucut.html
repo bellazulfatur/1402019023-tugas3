@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hitung tabung</title>
+</head>
+<body align="left" style="background-image: url(2.png); color: white;">
+	<tr>
+			<td><strong><a href="index.html">Tabung</a></strong></td>
+			<td><strong><a href="bola.html">Bola</a></strong></td>
+			<td><strong><a href="kerucut.html">Kerucut</a></strong></td>
+		</tr>
+<h2>Volume Kerucut</h2>
+	<p>Masukan Jari-jari Kerucut</p>
+	<input type="number" name="Jari-jari" id="j">
+	<p>Masukan Tinggi Kerucut</p>
+	<input type="number" name="Tinggi" id = "t"><br>
+	<p>Hasil Volume Kerucut</p>
+	<button onclick="kerucut()"> Hitung Volume </button><br>
+	<br>
+	Hasil : <span id = "h"></span>
+	<br>
+	<h2>Luas Permukaan Kerucut</h2>
+	<p>Masukan Jari-jari Kerucut</p>
+	<input type="number" name="Jari-jari" id="jk">
+	<p>Masukan Tinggi Kerucut</p>
+	<input type="number" name="Tinggi" id = "tk"><br>
+	<p>Hasil Luas Kerucut</p>
+	<button onclick="kerucut()"> Hitung Luas </button><br>
+	<br>
+	Hasil : <span id = "hk"></span>
+	<script>
+		var hs=document.getElementById('h');
+		var hsk = document.getElementById('hk');
+		function kerucut(){
+			var js = j.value;
+				ts = t.value;
+				hs.innerHTML = 3.14*Math.pow(js, 2)*ts;
+			var jsk = jk.value;
+				tsk = tk.value;
+				hsk.innerHTML = 3.14*jsk*(jsk + Math.sqrt(Math.pow(jsk, 2)+ Math.pow(tsk, 2)));
+		}
+	</script>
+
+	<br>
+	<br>
